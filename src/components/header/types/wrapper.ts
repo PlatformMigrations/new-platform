@@ -1,3 +1,3 @@
 export interface WrapperProps {
-    children: ReactNode
+    children: React.ReactNode
 }
