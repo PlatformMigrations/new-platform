@@ -1,17 +1,8 @@
-import { Header } from "@/components/header";
+
+import { HeaderSimple } from "@/components/ui/header-simple";
 
 export default function Home() {
   return (
-    <header>
-      <Header.left>
-        logo
-      </Header.left>
-      <Header.center>
-        center
-      </Header.center>
-      <Header.right>
-        right
-      </Header.right>
-    </header>
-  );
+    <HeaderSimple/>
+  )
 }
