@@ -16,8 +16,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} h-screen from-blue-500/60 to-slate-300/60 bg-gradient-to-tr` }>
-        <div className="  h-full backdrop-blur-4">
+      <body className={`${inter.className} h-screen from-blue-500/60 to-slate-300/60 bg-gradient-to-tr ` }>
+        <div className="h-full w-full backdrop-blur-4 flex justify-center">
           {children}
         </div>
       </body>
