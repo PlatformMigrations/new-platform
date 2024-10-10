@@ -1,7 +1,7 @@
 import { WrapperProps } from "./types/wrapper";
 
-export function CenterWrapper({ children }: WrapperProps) {
+export function CenterWrapper({ children, ...rest }: WrapperProps) {
   return (
-    <div>{children}</div>
+    <div {...rest}>{children}</div>
   )
 }
