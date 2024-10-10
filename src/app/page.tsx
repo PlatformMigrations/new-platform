@@ -94,7 +94,7 @@ export type Payment = {
   title: string
 }
 
-export const columns: ColumnDef<Payment>[] = [
+export const cols: ColumnDef<Payment>[] = [
   {
     accessorKey: "status",
     header: "Status",
@@ -174,7 +174,7 @@ export function DataTableDemo() {
 
   const table = useReactTable({
     data,
-    columns,
+    cols,
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,
     getCoreRowModel: getCoreRowModel(),
@@ -269,7 +269,7 @@ export function DataTableDemo() {
             ) : (
               <TableRow>
                 <TableCell
-                  colSpan={columns.length}
+                  colSpan={cols.length}
                   className="h-24 text-center"
                 >
                   No results.
