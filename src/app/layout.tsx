@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Content } from "@/components/ui/internal/content";
+import { HeaderSimple } from "@/components/ui/internal/header-simple";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} h-screen from-blue-500/60 to-slate-300/60 bg-gradient-to-tr ` }>
-        <div className="h-full w-full backdrop-blur-4 flex justify-center">
-          {children}
+      <body className={`${inter.className} h-screen from-blue-500/60 to-slate-300/60 bg-gradient-to-tr flex justify-center`}>
+        <div className="h-full w-full backdrop-blur-4 flex flex-col gap-11 md:max-w-[1400px]">
+          <HeaderSimple/>
+          <Content>
+            {children}
+          </Content>
         </div>
       </body>
     </html>

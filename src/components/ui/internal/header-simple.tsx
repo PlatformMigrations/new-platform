@@ -5,18 +5,19 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { GrAppsRounded } from "react-icons/gr";
 import { RiSearchLine } from "react-icons/ri";
 import { Profile } from "./profile";
+import { SlideInput } from "./slide-input";
 
 export function HeaderSimple() {
 
 	return (
-		<header className="flex justify-between p-4 md:max-w-[1400px] items-center w-full h-fit">
+		<header className="flex justify-between p-4 items-center w-full h-fit relative">
 			<Header.left>
 				logo
 			</Header.left>
-			<Header.center>
+			<Header.center className="absolute top-4 left-1/2 -translate-x-1/2">
 				<Popover>
 					<PopoverTrigger>
-						<div className="bg-zinc-200/70 p-2 rounded-full">
+						<div className="bg-zinc-100/70 p-2 rounded-full" >
 							<div className="bg-zinc-50 p-3 rounded-full">
 								<GrAppsRounded />
 							</div>
@@ -40,9 +41,7 @@ export function HeaderSimple() {
 			</Header.center>
 			<Header.right>
 				<div className="flex gap-4 items-center">
-					<div className="bg-zinc-50 p-4 rounded-full">
-						<RiSearchLine />
-					</div>
+					<SlideInput/>
 
 					<Profile/>
 					
