@@ -10,7 +10,7 @@ import { SlideInput } from "./slide-input";
 export function HeaderSimple() {
 
 	return (
-		<header className="flex justify-between p-4 items-center w-full h-fit relative">
+		<header className="flex justify-between py-4 items-center w-full h-fit relative">
 			<Header.left>
 				logo
 			</Header.left>
