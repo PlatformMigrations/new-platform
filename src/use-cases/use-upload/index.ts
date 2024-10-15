@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
 
 const BASE_URL = 'http://localhost:3001';
 
-export const uploadMedia = async (file: File) => {
+export const uploadMedia = async (file: File, onUploadProgress?: AxiosRequestConfig['onUploadProgress']) => { // Usando o tipo correto
     const formData = new FormData();
     formData.append('file', file);
 
@@ -11,12 +11,7 @@ export const uploadMedia = async (file: File) => {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
-            onUploadProgress: (progressEvent) => {
-                if (progressEvent.total) {
-                    const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
-                    console.log(`Progresso: ${percentCompleted}%`);
-                }
-            },
+            onUploadProgress, // O callback correto para progresso do upload
         });
 
         return response.data;
